@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="validetta/validetta.css" rel="stylesheet" type="text/css" media="screen" >
+</head>
+
+<body>
+<form autocomplete="off" action="./action_page.php">
+
+<div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Nom</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="Nom" id="example-text-input">
+  </div>
+  
+  
+    <label for="example-text-input" class="col-2 col-form-label">Prénom</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="Prénom" id="example-text-input">
+  </div>
+  
+  
+  <div class="form-group row">
+  <label for="example-date-input" class="col-2 col-form-label">Date de naissance</label>
+  <div class="col-10">
+    <input class="form-control" type="date" value="xx/xx/xxxx" id="example-date-input">
+  </div>
+</div>
+
+
+<br>
+<h3>Adresse :</h3>
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" name="CP" placeholder="Code postal">
+  </div>
+  <input type="submit">
+
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" name="maVille" placeholder="Ville">
+  </div>
+  <input type="submit">
+<br>
+
+
+<br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Adresse e-mail :</label>
+    <input type="email" class="form-control" id="emai1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec d'autres personnes</small>
+  </div>
+  <div class="form-group">
+    <label for="Password1">Mot de passe :</label>
+    <input type="password" class="form-control" id="Password1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="check-input" id="exampleCheck1">
+    <label class="label" for="exampleCheck1">J'accepte les conditions générales</label>
+  </div>
+<button type="submit" class="btn btn-primary">envoyer</button>
+  
+
+
+
+</form>
+  
+<script>
+autocomplete(document.getElementById("myInput"), countries);
+</script>
+<script>
+var countries = ["Anderlecht", "Auderghem", "Berchem-Sainte-Agathe", "Bruxelles", "Etterbeek", "Evere", "Forest", "Ganshoren", "Ixelles", "Jette", "Koekelberg", "Molenbeek-Saint-Jean", "Saint-Gilles", "Saint-Josse-ten-Noode", "Schaerbeek","Uccle", "Watermael-Boitsfort", "Woluwe-Saint-Lambert", "Woluwe-Saint-Pierre"];
+</script>
+<script type="text/javascript" src="jansn.js"></script>
+
+<script>    browserSync.init({
+        //server: "./app"
+		proxy: "localhost/formulaire-BS-jQuery-Validetta-JSON/app"
+    });</script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="./validetta/validetta.js"></script>
+<script type="text/javascript" src="./validetta/localization/validettaLang-tr-TR.js"></script>
+
+
+</body>
+</html>
